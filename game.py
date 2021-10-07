@@ -27,3 +27,4 @@ if guess == number:
     print("Congratulations, you guessed the number was " + str(number) + " in " + str(guesses_taken) + " tries!")
 else:
     print('Nope. The number I was thinking of was ' + str(number) + '.')
+# This is changed
