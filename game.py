@@ -13,8 +13,16 @@ for guesses_taken in range(6):
         print("Take a guess.")
     else:
         print("Your remaining guesses are at", (6 - guesses_taken))
-    guess = input()
-    guess = int(guess)
+
+    # While statement for data validation
+    while True:
+        guess = input()
+        try:
+            guess = int(guess)
+        except ValueError:
+            print("Not a valid guess. Please enter an integer")
+            continue
+        break
 
     if guess > number:
         print(f'{guess} is too high')
@@ -27,4 +35,3 @@ if guess == number:
     print("Congratulations, you guessed the number was " + str(number) + " in " + str(guesses_taken) + " tries!")
 else:
     print('Nope. The number I was thinking of was ' + str(number) + '.')
-# This is changed
